@@ -1,0 +1,1611 @@
+<!-- Landing Page - PrediksiRumah Majalengka -->
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PrediksiRumah Majalengka - Estimasi Harga Properti Akurat</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "success-green": "#16A34A",
+                        "surface-variant": "#e0e3e6",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-tertiary-fixed": "#311400",
+                        "tertiary-container": "#b75b00",
+                        "surface-light-shadow": "#FFFFFF",
+                        "surface-tint": "#005ac2",
+                        "text-heading": "#2D3748",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "surface-container": "#eceef1",
+                        "outline-variant": "#c2c6d6",
+                        "surface-dark-shadow": "#D1D9E6",
+                        "secondary": "#006a6a",
+                        "surface-dim": "#d8dadd",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-secondary-fixed": "#002020",
+                        "inverse-primary": "#adc6ff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#93f2f2",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "primary-fixed-dim": "#adc6ff",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fc",
+                        "primary": "#0058be",
+                        "error-container": "#ffdad6",
+                        "error-red": "#DC2626",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "outline": "#727785",
+                        "surface-container-high": "#e6e8eb",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#424754",
+                        "on-surface": "#191c1e",
+                        "surface": "#f7f9fc",
+                        "secondary-container": "#90efef",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#fffbff",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "inverse-on-surface": "#eff1f4",
+                        "tertiary": "#924700",
+                        "surface-bright": "#f7f9fc",
+                        "on-secondary-container": "#006e6e",
+                        "on-primary-container": "#fefcff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-primary-fixed": "#001a42",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#2170e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "element-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f7f9fc;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .neumorphic-outset {
+            background: #f7f9fc;
+            box-shadow: 16px 16px 32px #D1D9E6, -16px -16px 32px #FFFFFF;
+        }
+
+        .neumorphic-inset {
+            background: #f7f9fc;
+            box-shadow: inset 8px 8px 16px #D1D9E6, inset -8px -8px 16px #FFFFFF;
+        }
+
+        .neumorphic-button-primary {
+            background: #0058be;
+            box-shadow: 8px 8px 16px #cbd5e1, -8px -8px 16px #ffffff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .neumorphic-button-primary:active {
+            box-shadow: inset 4px 4px 8px #004395, inset -4px -4px 8px #2170e4;
+            transform: scale(0.98);
+        }
+
+        .neumorphic-card-hover:hover {
+            transform: translateY(-4px);
+            transition: transform 0.3s ease;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(8px);
+            background: rgba(247, 249, 252, 0.8);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface">
+    <!-- TopNavBar -->
+    <header class="w-full sticky top-0 z-50 glass-nav shadow-[16px_16px_32px_#D1D9E6,-16px_-16px_32px_#FFFFFF]">
+        <nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-primary">PrediksiRumah</div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md cursor-pointer transition-all duration-300"
+                    href="#">Home</a>
+                <a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-all duration-300 cursor-pointer"
+                    href="#">Prediksi</a>
+                <a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-all duration-300 cursor-pointer"
+                    href="#">Dashboard</a>
+                <a class="text-on-surface-variant font-medium font-body-md text-body-md hover:text-primary transition-all duration-300 cursor-pointer"
+                    href="#">Login</a>
+            </div>
+            <!-- Mobile Toggle Placeholder -->
+            <button class="md:hidden p-2 neumorphic-outset rounded-lg active:scale-95 transition-all">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="relative overflow-hidden px-margin-mobile md:px-margin-desktop pt-16 pb-24 md:pt-32 md:pb-40 flex flex-col items-center text-center">
+            <div class="max-w-4xl z-10">
+                <div
+                    class="inline-block px-4 py-2 mb-6 rounded-full neumorphic-inset text-primary font-label-md text-label-md">
+                    Analisis Properti Berbasis Kecerdasan Buatan
+                </div>
+                <h1 class="font-display-lg text-display-lg mb-6 leading-tight">
+                    Prediksi Harga Rumah <span class="text-primary">Majalengka</span> Akurat
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Optimalkan keputusan investasi properti Anda dengan estimasi harga real-time menggunakan algoritma
+                    <span class="font-semibold text-on-surface">Random Forest Machine Learning</span> yang dilatih
+                    khusus untuk pasar lokal Majalengka.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <button
+                        class="neumorphic-button-primary text-white px-10 py-4 rounded-xl font-headline-md text-headline-md flex items-center gap-2 group">
+                        Mulai Prediksi
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                    <button
+                        class="neumorphic-outset text-primary px-10 py-4 rounded-xl font-headline-md text-headline-md hover:text-on-primary-fixed-variant transition-colors">
+                        Pelajari Metode
+                    </button>
+                </div>
+            </div>
+            <!-- Decorative Neumorphic Elements -->
+            <div
+                class="absolute -top-24 -left-24 w-96 h-96 rounded-full neumorphic-outset opacity-50 pointer-events-none">
+            </div>
+            <div
+                class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full neumorphic-inset opacity-30 pointer-events-none">
+            </div>
+        </section>
+        <!-- Stats/Social Proof Section (Small Bento Fragment) -->
+        <section class="px-margin-mobile md:px-margin-desktop mb-32 max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="neumorphic-outset p-8 rounded-2xl flex flex-col items-center text-center">
+                    <span class="font-display-lg text-display-lg text-primary mb-2">94%</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Akurasi
+                        Model</span>
+                </div>
+                <div class="neumorphic-outset p-8 rounded-2xl flex flex-col items-center text-center">
+                    <span class="font-display-lg text-display-lg text-primary mb-2">500+</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Data
+                        Properti</span>
+                </div>
+                <div class="neumorphic-outset p-8 rounded-2xl flex flex-col items-center text-center">
+                    <span class="font-display-lg text-display-lg text-primary mb-2">&lt; 1s</span>
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Waktu
+                        Pemrosesan</span>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works Section -->
+        <section class="bg-surface-container-low py-24 px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-lg text-headline-lg mb-4">Bagaimana Kami Bekerja</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
+                        Tiga langkah sederhana untuk mendapatkan estimasi nilai properti yang presisi di wilayah
+                        Majalengka.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Step 1 -->
+                    <div class="neumorphic-outset p-10 rounded-3xl neumorphic-card-hover text-center relative">
+                        <div
+                            class="w-16 h-16 neumorphic-inset rounded-full flex items-center justify-center mx-auto mb-8 text-primary">
+                            <span class="material-symbols-outlined text-3xl">edit_document</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4">Input Data</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Masukkan detail properti seperti luas tanah, luas bangunan, jumlah kamar, dan lokasi
+                            spesifik di Majalengka.
+                        </p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="neumorphic-outset p-10 rounded-3xl neumorphic-card-hover text-center relative">
+                        <div
+                            class="w-16 h-16 neumorphic-inset rounded-full flex items-center justify-center mx-auto mb-8 text-primary">
+                            <span class="material-symbols-outlined text-3xl">memory</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4">Proses AI</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Algoritma Random Forest kami melakukan komputasi regresi terhadap ribuan titik data pasar
+                            terkini.
+                        </p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="neumorphic-outset p-10 rounded-3xl neumorphic-card-hover text-center relative">
+                        <div
+                            class="w-16 h-16 neumorphic-inset rounded-full flex items-center justify-center mx-auto mb-8 text-primary">
+                            <span class="material-symbols-outlined text-3xl">payments</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4">Hasil Estimasi</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Dapatkan kisaran harga pasar yang wajar dalam hitungan detik untuk keperluan jual beli atau
+                            investasi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA/Methodology Teaser Section -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="neumorphic-outset p-8 md:p-16 rounded-[40px] flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img alt="Properti Modern" class="rounded-3xl shadow-xl w-full object-cover aspect-video"
+                        data-alt="A clean, high-angle architectural photograph of a modern residential neighborhood in a lush green valley setting similar to Majalengka. The image should feature elegant minimalist houses with clean lines, surrounded by tropical greenery under a bright, clear blue sky. The lighting is crisp and natural, emphasizing the professional and academic tone of a real estate analysis platform. The color palette consists of soft grays, whites, and deep blues to match the UI."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV2BSIoIjEMBPyKyiD5gMQ6nemalmZOk9rd8U3s1CNCYI1pMAK1K2FRxjjpbafbg3nUWL7-MBvAxXWBKMnfk2zq4yrOsq-0Mc9tuf1UP3P_9Fo0KyaNEDdt8X9pjAxAulNYxYnna4UEKUhnVgfc5qr7lZ3fPYqyBjDvCgid-xLkHSYV7-43vH_eP8WodtRs3vB_kLN7ITKhF59FfwLJXYPlHQOtE0sMpFdNGjkv-GkGWslBfv5ypz3XwBlWpsWvAfQKl7R1M2spD4" />
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="font-headline-lg text-headline-lg mb-6">Analisis Berbasis Riset</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Dikembangkan oleh tim dari Universitas Muhammadiyah Cirebon, proyek ini menggabungkan keahlian
+                        ilmu komputer dengan data spasial wilayah Majalengka untuk menghasilkan transparansi harga
+                        properti bagi masyarakat.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-success-green">check_circle</span>
+                            <span class="font-label-md text-label-md">Model tervalidasi dataset lokal</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-success-green">check_circle</span>
+                            <span class="font-label-md text-label-md">Pembaruan data pasar berkala</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-success-green">check_circle</span>
+                            <span class="font-label-md text-label-md">Open source untuk keperluan akademik</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-background shadow-[16px_16px_32px_#D1D9E6,-16px_-16px_32px_#FFFFFF]">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 w-full max-w-container-max mx-auto">
+            <div class="flex flex-col gap-4 mb-8 md:mb-0">
+                <div class="font-headline-md text-headline-md text-primary">PrediksiRumah</div>
+                <p class="font-label-sm text-label-sm text-secondary max-w-xs">
+                    Platform prediksi harga properti cerdas untuk membantu masyarakat Majalengka dalam estimasi nilai
+                    aset.
+                </p>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-6">
+                <div class="flex gap-8">
+                    <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                        href="#">Privacy Policy</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                        href="#">Terms of Service</a>
+                    <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                        href="#">Contact</a>
+                </div>
+                <div class="font-label-sm text-label-sm text-secondary opacity-75">
+                    © 2024 PrediksiRumah - Universitas Muhammadiyah Cirebon (UMC)
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Smooth hover interactions for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', function () {
+                if (!this.classList.contains('neumorphic-button-primary')) {
+                    this.style.boxShadow = 'inset 4px 4px 8px #D1D9E6, inset -4px -4px 8px #FFFFFF';
+                }
+            });
+            button.addEventListener('mouseup', function () {
+                if (!this.classList.contains('neumorphic-button-primary')) {
+                    this.style.boxShadow = '';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- Input Prediksi - PrediksiRumah Majalengka -->
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+        }
+
+        .neumorphic-outset {
+            box-shadow: 16px 16px 32px #D1D9E6, -16px -16px 32px #FFFFFF;
+        }
+
+        .neumorphic-inset {
+            box-shadow: inset 8px 8px 16px #D1D9E6, inset -8px -8px 16px #FFFFFF;
+        }
+
+        .neumorphic-button-pressed {
+            box-shadow: inset 6px 6px 12px #D1D9E6, inset -6px -6px 12px #FFFFFF !important;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Custom Checkbox Styling */
+        .neumorphic-checkbox {
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            background: #f7f9fc;
+            box-shadow: inset 3px 3px 6px #D1D9E6, inset -3px -3px 6px #FFFFFF;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .neumorphic-checkbox:checked::after {
+            content: 'check';
+            font-family: 'Material Symbols Outlined';
+            font-size: 18px;
+            color: #0058be;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "success-green": "#16A34A",
+                        "surface-variant": "#e0e3e6",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-tertiary-fixed": "#311400",
+                        "tertiary-container": "#b75b00",
+                        "surface-light-shadow": "#FFFFFF",
+                        "surface-tint": "#005ac2",
+                        "text-heading": "#2D3748",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "surface-container": "#eceef1",
+                        "outline-variant": "#c2c6d6",
+                        "surface-dark-shadow": "#D1D9E6",
+                        "secondary": "#006a6a",
+                        "surface-dim": "#d8dadd",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-secondary-fixed": "#002020",
+                        "inverse-primary": "#adc6ff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#93f2f2",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "primary-fixed-dim": "#adc6ff",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fc",
+                        "primary": "#0058be",
+                        "error-container": "#ffdad6",
+                        "error-red": "#DC2626",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "outline": "#727785",
+                        "surface-container-high": "#e6e8eb",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#424754",
+                        "on-surface": "#191c1e",
+                        "surface": "#f7f9fc",
+                        "secondary-container": "#90efef",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#fffbff",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "inverse-on-surface": "#eff1f4",
+                        "tertiary": "#924700",
+                        "surface-bright": "#f7f9fc",
+                        "on-secondary-container": "#006e6e",
+                        "on-primary-container": "#fefcff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-primary-fixed": "#001a42",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#2170e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "element-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-surface">
+    <!-- TopNavBar -->
+    <header
+        class="w-full sticky top-0 z-50 bg-background shadow-[16px_16px_32px_#D1D9E6,-16px_-16px_32px_#FFFFFF] flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+        <div class="font-headline-md text-headline-md font-bold text-primary">PrediksiRumah</div>
+        <nav class="hidden md:flex gap-8 items-center">
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                href="#">Home</a>
+            <a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300 cursor-pointer active:scale-95"
+                href="#">Prediksi</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                href="#">Dashboard</a>
+            <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                href="#">Login</a>
+        </nav>
+        <button class="md:hidden p-2 neumorphic-outset rounded-lg active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-primary">menu</span>
+        </button>
+    </header>
+    <main class="min-h-screen py-16 px-4 md:px-0">
+        <div class="max-w-4xl mx-auto">
+            <!-- Hero Title -->
+            <div class="text-center mb-12">
+                <h1 class="font-headline-lg text-headline-lg text-text-heading mb-4">Estimasi Harga Rumah</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">Lengkapi detail properti Anda untuk
+                    mendapatkan prediksi harga pasar yang akurat.</p>
+            </div>
+            <!-- Form Card -->
+            <div class="neumorphic-outset rounded-3xl p-8 md:p-12 bg-background">
+                <form class="space-y-10" id="predictionForm">
+                    <!-- Properti Section -->
+                    <section>
+                        <div class="flex items-center gap-2 mb-6 text-primary">
+                            <span class="material-symbols-outlined">home</span>
+                            <h2 class="font-headline-md text-headline-md">Detail Properti</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md ml-1">Luas Tanah (m²)</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
+                                    placeholder="Contoh: 120" type="number" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md ml-1">Luas Bangunan (m²)</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
+                                    placeholder="Contoh: 80" type="number" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md ml-1">Kamar Tidur</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
+                                    placeholder="Jumlah" type="number" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md ml-1">Kamar Mandi</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
+                                    placeholder="Jumlah" type="number" />
+                            </div>
+                        </div>
+                    </section>
+                    <hr
+                        class="border-none h-[2px] bg-gradient-to-r from-transparent via-surface-dark-shadow to-transparent opacity-50" />
+                    <!-- Lokasi Section -->
+                    <section>
+                        <div class="flex items-center gap-2 mb-6 text-primary">
+                            <span class="material-symbols-outlined">location_on</span>
+                            <h2 class="font-headline-md text-headline-md">Lokasi &amp; Akses</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md ml-1">Kecamatan</label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md appearance-none">
+                                        <option disabled="" selected="" value="">Pilih Kecamatan</option>
+                                        <option value="kesambi">Kesambi</option>
+                                        <option value="lemah_wungkuk">Lemahwungkuk</option>
+                                        <option value="harjamukti">Harjamukti</option>
+                                        <option value="kejaksan">Kejaksan</option>
+                                        <option value="pekalipan">Pekalipan</option>
+                                    </select>
+                                    <span
+                                        class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-label-md ml-1">Jarak ke Pusat Kota (km)</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
+                                    placeholder="Contoh: 2.5" step="0.1" type="number" />
+                            </div>
+                        </div>
+                    </section>
+                    <hr
+                        class="border-none h-[2px] bg-gradient-to-r from-transparent via-surface-dark-shadow to-transparent opacity-50" />
+                    <!-- Lainnya Section -->
+                    <section>
+                        <div class="flex items-center gap-2 mb-6 text-primary">
+                            <span class="material-symbols-outlined">stars</span>
+                            <h2 class="font-headline-md text-headline-md">Informasi Tambahan</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                            <div class="space-y-4">
+                                <label class="font-label-md text-label-md ml-1 block">Kondisi Bangunan (1-5)</label>
+                                <div class="flex justify-between items-center px-2">
+                                    <span class="text-label-sm text-on-surface-variant">Buruk</span>
+                                    <span class="text-label-sm text-on-surface-variant">Sangat Bagus</span>
+                                </div>
+                                <input
+                                    class="w-full h-4 rounded-full neumorphic-inset bg-background appearance-none cursor-pointer accent-primary"
+                                    max="5" min="1" step="1" type="range" />
+                            </div>
+                            <div class="flex flex-col justify-end space-y-4">
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input class="neumorphic-checkbox" type="checkbox" />
+                                    <span
+                                        class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Tersedia
+                                        Garasi</span>
+                                </label>
+                                <label class="flex items-center gap-4 cursor-pointer group">
+                                    <input class="neumorphic-checkbox" type="checkbox" />
+                                    <span
+                                        class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Tersedia
+                                        Taman</span>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Submit Button -->
+                    <div class="pt-8">
+                        <button
+                            class="w-full py-5 rounded-2xl bg-background neumorphic-outset text-primary font-bold text-headline-md flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] active:scale-95 active:shadow-inner"
+                            id="submitBtn" type="submit">
+                            <span class="material-symbols-outlined">calculate</span>
+                            Hitung Estimasi Harga
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Descriptive Image Section -->
+            <div class="mt-16 rounded-3xl overflow-hidden neumorphic-outset">
+                <img alt="Real Estate Analysis" class="w-full h-80 object-cover"
+                    data-alt="A high-angle, clean architectural shot of a modern residential neighborhood with minimalist houses in soft daylight. The scene features soft blue and gray tones with clear shadows, reflecting a professional and calm aesthetic. The lighting is soft and high-key, emphasizing precision and modern urban planning. The overall mood is sophisticated, echoing a data-driven approach to real estate and predictive house pricing analysis."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDF7X84nr4ldgLggM-2HL0QcZHY7IE0T422dnZSvNjPTvW1YDK7SilfRQxwbHQ5b1PYKCKPGXdLiHAN7LLKT43-Z561c7Xi0gShlvNxUcDsVR_pYFjDM9rS9bu8xIeJrEdVr8AGI4J9HLKrF82glXt36z7lowt4v5TIEV-zC3dWRU46BQRgl9aV0wi2SgCeYN1QT53qV3rhlDlw1J2y8PK7NSiL-o7APspLtB13oe-RC1l5DiwqDCZPvG2ng7nHQtuveo_ztjVaB8" />
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-background shadow-[16px_16px_32px_#D1D9E6,-16px_-16px_32px_#FFFFFF] py-8">
+        <div
+            class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-headline-md text-headline-md text-primary font-bold">PrediksiRumah</div>
+            <p class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left">
+                © 2024 PrediksiRumah - Universitas Muhammadiyah Cirebon (UMC)
+            </p>
+            <div class="flex gap-6">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const form = document.getElementById('predictionForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Add visual feedback for button press
+            submitBtn.classList.add('neumorphic-button-pressed');
+            submitBtn.innerHTML = `
+                <span class="material-symbols-outlined animate-spin">sync</span>
+                Memproses Prediksi...
+            `;
+
+            // Simulate API call
+            setTimeout(() => {
+                submitBtn.classList.remove('neumorphic-button-pressed');
+                submitBtn.innerHTML = `
+                    <span class="material-symbols-outlined">check_circle</span>
+                    Prediksi Selesai!
+                `;
+
+                // Show a simple alert for demo purposes
+                alert('Prediksi harga rumah Anda sedang diproses berdasarkan algoritma machine learning kami.');
+
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = `
+                        <span class="material-symbols-outlined">calculate</span>
+                        Hitung Estimasi Harga
+                    `;
+                }, 2000);
+            }, 1500);
+        });
+
+        // Interactive ranges
+        const range = document.querySelector('input[type="range"]');
+        range.addEventListener('input', (e) => {
+            const value = e.target.value;
+            // You could update a value display here if needed
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- Hasil Prediksi - PrediksiRumah Majalengka -->
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hasil Prediksi - PrediksiRumah</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "success-green": "#16A34A",
+                        "surface-variant": "#e0e3e6",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-tertiary-fixed": "#311400",
+                        "tertiary-container": "#b75b00",
+                        "surface-light-shadow": "#FFFFFF",
+                        "surface-tint": "#005ac2",
+                        "text-heading": "#2D3748",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "surface-container": "#eceef1",
+                        "outline-variant": "#c2c6d6",
+                        "surface-dark-shadow": "#D1D9E6",
+                        "secondary": "#006a6a",
+                        "surface-dim": "#d8dadd",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-secondary-fixed": "#002020",
+                        "inverse-primary": "#adc6ff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#93f2f2",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "primary-fixed-dim": "#adc6ff",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fc",
+                        "primary": "#0058be",
+                        "error-container": "#ffdad6",
+                        "error-red": "#DC2626",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "outline": "#727785",
+                        "surface-container-high": "#e6e8eb",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#424754",
+                        "on-surface": "#191c1e",
+                        "surface": "#f7f9fc",
+                        "secondary-container": "#90efef",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#fffbff",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "inverse-on-surface": "#eff1f4",
+                        "tertiary": "#924700",
+                        "surface-bright": "#f7f9fc",
+                        "on-secondary-container": "#006e6e",
+                        "on-primary-container": "#fefcff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-primary-fixed": "#001a42",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#2170e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "element-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f7f9fc;
+            color: #191c1e;
+        }
+
+        .neumorph-outset {
+            box-shadow: 16px 16px 32px #D1D9E6, -16px -16px 32px #FFFFFF;
+        }
+
+        .neumorph-inset {
+            box-shadow: inset 8px 8px 16px #D1D9E6, inset -8px -8px 16px #FFFFFF;
+        }
+
+        .neumorph-button-active:active {
+            box-shadow: inset 4px 4px 8px #D1D9E6, inset -4px -4px 8px #FFFFFF;
+            transform: scale(0.98);
+        }
+
+        .ridge-separator {
+            border-top: 1px solid #FFFFFF;
+            border-bottom: 1px solid #D1D9E6;
+        }
+
+        .animate-bar {
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col font-body-md text-body-md">
+    <!-- TopNavBar -->
+    <header class="w-full sticky top-0 bg-background z-50 shadow-lg outset">
+        <nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-primary">PrediksiRumah</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                    href="#">Home</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                    href="#">Prediksi</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                    href="#">Dashboard</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                    href="#">Login</a>
+            </div>
+            <button class="md:hidden p-2 neumorph-outset rounded-lg">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+        <!-- Header Text -->
+        <div class="mb-12 text-center">
+            <h1 class="font-headline-lg text-headline-lg text-primary mb-2">Analisis Nilai Properti</h1>
+            <p class="text-on-surface-variant font-body-md">Berdasarkan data pasar terbaru dan parameter yang Anda
+                masukkan.</p>
+        </div>
+        <!-- Main Results Card -->
+        <section class="mb-12">
+            <div class="neumorph-outset rounded-3xl p-8 md:p-12 text-center bg-background">
+                <span
+                    class="inline-block px-4 py-2 rounded-full neumorph-inset text-label-md font-label-md text-secondary mb-6">
+                    Kategori: Mewah
+                </span>
+                <h2 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-2">Estimasi
+                    Harga</h2>
+                <div class="font-display-lg text-display-lg text-primary mb-6">
+                    Rp 750.000.000
+                </div>
+                <div class="max-w-md mx-auto">
+                    <div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant mb-2">
+                        <span>Interval Kepercayaan</span>
+                        <span class="text-success-green">Tinggi (95%)</span>
+                    </div>
+                    <div class="h-4 w-full bg-surface-container-low rounded-full neumorph-inset p-1 overflow-hidden">
+                        <div class="h-full bg-primary rounded-full" style="width: 95%"></div>
+                    </div>
+                    <p class="mt-4 text-label-sm font-label-sm text-on-surface-variant italic">
+                        *Rentang estimasi: Rp 725.000.000 - Rp 775.000.000
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Analytics Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-12">
+            <!-- Feature Importance (Bento Style) -->
+            <div class="neumorph-outset rounded-3xl p-8 bg-background">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary">analytics</span>
+                    <h3 class="font-headline-md text-headline-md">Faktor Penentu Harga</h3>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-label-md font-label-md">Lokasi Strategis</span>
+                            <span class="text-label-md font-label-md">45%</span>
+                        </div>
+                        <div class="h-2 w-full bg-surface-container-low rounded-full neumorph-inset overflow-hidden">
+                            <div class="h-full bg-primary animate-bar" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-label-md font-label-md">Luas Bangunan</span>
+                            <span class="text-label-md font-label-md">30%</span>
+                        </div>
+                        <div class="h-2 w-full bg-surface-container-low rounded-full neumorph-inset overflow-hidden">
+                            <div class="h-full bg-secondary animate-bar" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-label-md font-label-md">Kualitas Material</span>
+                            <span class="text-label-md font-label-md">15%</span>
+                        </div>
+                        <div class="h-2 w-full bg-surface-container-low rounded-full neumorph-inset overflow-hidden">
+                            <div class="h-full bg-tertiary-container animate-bar" style="width: 15%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-label-md font-label-md">Fasilitas Publik</span>
+                            <span class="text-label-md font-label-md">10%</span>
+                        </div>
+                        <div class="h-2 w-full bg-surface-container-low rounded-full neumorph-inset overflow-hidden">
+                            <div class="h-full bg-outline-variant animate-bar" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Property Comparison Table -->
+            <div class="neumorph-outset rounded-3xl p-8 bg-background">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary">compare_arrows</span>
+                    <h3 class="font-headline-md text-headline-md">Perbandingan Pasar</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="neumorph-outset rounded-xl">
+                                <th class="p-4 font-label-md text-label-md text-on-surface-variant">Fitur</th>
+                                <th class="p-4 font-label-md text-label-md text-on-surface-variant">Properti Anda</th>
+                                <th class="p-4 font-label-md text-label-md text-on-surface-variant">Rata-rata Area</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y-0">
+                            <tr class="ridge-separator">
+                                <td class="p-4 text-on-surface-variant">Luas Tanah</td>
+                                <td class="p-4 font-bold">120 m²</td>
+                                <td class="p-4">90 m²</td>
+                            </tr>
+                            <tr class="ridge-separator">
+                                <td class="p-4 text-on-surface-variant">Kamar Tidur</td>
+                                <td class="p-4 font-bold">3</td>
+                                <td class="p-4">2</td>
+                            </tr>
+                            <tr class="ridge-separator">
+                                <td class="p-4 text-on-surface-variant">Akses Jalan</td>
+                                <td class="p-4 font-bold text-success-green">Pribadi</td>
+                                <td class="p-4">Umum</td>
+                            </tr>
+                            <tr class="ridge-separator">
+                                <td class="p-4 text-on-surface-variant">Keamanan</td>
+                                <td class="p-4 font-bold text-success-green">24 Jam</td>
+                                <td class="p-4">Terbatas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Action Buttons -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 py-12">
+            <button
+                class="w-full md:w-auto px-10 py-4 neumorph-outset rounded-full text-primary font-bold flex items-center justify-center gap-3 neumorph-button-active transition-all hover:scale-105">
+                <span class="material-symbols-outlined">download</span>
+                Download PDF Report
+            </button>
+            <button
+                class="w-full md:w-auto px-10 py-4 neumorph-outset bg-primary text-white rounded-full font-bold flex items-center justify-center gap-3 neumorph-button-active transition-all hover:scale-105"
+                onclick="window.location.reload()">
+                <span class="material-symbols-outlined" data-weight="fill">refresh</span>
+                Mulai Lagi
+            </button>
+        </div>
+        <!-- Decorative Illustration Section -->
+        <section class="mt-8 mb-16 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
+            <div class="neumorph-inset rounded-3xl h-64 w-full relative overflow-hidden">
+                <img alt="Modern House Architecture" class="w-full h-full object-cover"
+                    data-alt="A cinematic, high-angle architectural photograph of a sleek, modern house design featuring clean lines and large glass windows. The building is captured during the golden hour, with soft, warm sunlight casting long shadows and highlighting the tactile textures of concrete and wood. The overall aesthetic is minimalist, professional, and sophisticated, perfectly matching a clean Neumorphic Soft UI design system with a palette of subtle blues and whites."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTQfhUjd6HuknFdTmcWhAC9XwqFeoneMrJEU1u6uce8PHbc6OYtqXDRtjbv581yN7SmYoaJhiHRzjrebnq-CysWdwCJ00WyldYdKt8YXTdnPGkwUrGgCz47CV6FAAlNmOlf_Ytwv_-YcXFP9aux3GrcFtjB5-JvHdvyo0Ia_j96Zg0kar1jxC356DalUw-VryhoDtUpP25ABQlTlcUQ8trpCNK9OUuoAZJ_16TYTD06xYhrTy7WfxLCtlajYmCCYzIUxSPRPPhZqE" />
+                <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-background shadow-md outset">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-8 w-full max-w-container-max mx-auto">
+            <div class="mb-4 md:mb-0">
+                <span class="font-headline-md text-headline-md text-primary">PrediksiRumah</span>
+                <p class="text-label-sm font-label-sm text-on-surface-variant mt-2">© 2024 PrediksiRumah - Universitas
+                    Muhammadiyah Cirebon (UMC)</p>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors"
+                    href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', function () {
+                this.classList.add('neumorph-inset');
+                this.classList.remove('neumorph-outset');
+            });
+            button.addEventListener('mouseup', function () {
+                this.classList.remove('neumorph-inset');
+                this.classList.add('neumorph-outset');
+            });
+            button.addEventListener('mouseleave', function () {
+                this.classList.remove('neumorph-inset');
+                this.classList.add('neumorph-outset');
+            });
+        });
+
+        // Trigger animations on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const bars = document.querySelectorAll('.animate-bar');
+            bars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 300);
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- Admin Dashboard - PrediksiRumah Majalengka -->
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PrediksiRumah Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "success-green": "#16A34A",
+                        "surface-variant": "#e0e3e6",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-tertiary-fixed": "#311400",
+                        "tertiary-container": "#b75b00",
+                        "surface-light-shadow": "#FFFFFF",
+                        "surface-tint": "#005ac2",
+                        "text-heading": "#2D3748",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#76d6d5",
+                        "surface-container": "#eceef1",
+                        "outline-variant": "#c2c6d6",
+                        "surface-dark-shadow": "#D1D9E6",
+                        "secondary": "#006a6a",
+                        "surface-dim": "#d8dadd",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-secondary-fixed": "#002020",
+                        "inverse-primary": "#adc6ff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#93f2f2",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "primary-fixed-dim": "#adc6ff",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fc",
+                        "primary": "#0058be",
+                        "error-container": "#ffdad6",
+                        "error-red": "#DC2626",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "outline": "#727785",
+                        "surface-container-high": "#e6e8eb",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#424754",
+                        "on-surface": "#191c1e",
+                        "surface": "#f7f9fc",
+                        "secondary-container": "#90efef",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#fffbff",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "inverse-on-surface": "#eff1f4",
+                        "tertiary": "#924700",
+                        "surface-bright": "#f7f9fc",
+                        "on-secondary-container": "#006e6e",
+                        "on-primary-container": "#fefcff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-primary-fixed": "#001a42",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#2170e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "element-gap": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .neumorphic-outset {
+            box-shadow: 12px 12px 24px #D1D9E6, -12px -12px 24px #FFFFFF;
+        }
+
+        .neumorphic-inset {
+            box-shadow: inset 8px 8px 16px #D1D9E6, inset -8px -8px 16px #FFFFFF;
+        }
+
+        .neumorphic-button-pressed {
+            box-shadow: inset 4px 4px 8px #D1D9E6, inset -4px -4px 8px #FFFFFF;
+        }
+
+        .horizontal-ridge {
+            border-bottom: 1px solid #D1D9E6;
+            box-shadow: 0 1px 0 #FFFFFF;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <header class="w-full sticky top-0 z-50 bg-background shadow-[16px_16px_32px_#D1D9E6,-16px_-16px_32px_#FFFFFF]">
+        <nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-primary">PrediksiRumah</div>
+            <div class="hidden md:flex items-center gap-element-gap">
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                    href="#">Home</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                    href="#">Prediksi</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300 cursor-pointer active:scale-95"
+                    href="#">Dashboard</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-all duration-300 cursor-pointer active:scale-95"
+                    href="#">Login</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button
+                class="md:hidden neumorphic-outset p-2 rounded-lg flex items-center justify-center active:scale-95 transition-transform">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-base md:py-10">
+        <!-- Dashboard Navigation Switches -->
+        <div class="flex flex-wrap gap-element-gap mb-10">
+            <button
+                class="neumorphic-button-pressed flex items-center gap-2 px-6 py-3 rounded-full text-primary font-bold transition-all">
+                <span class="material-symbols-outlined">dashboard</span> Overview
+            </button>
+            <button
+                class="neumorphic-outset flex items-center gap-2 px-6 py-3 rounded-full text-on-surface-variant font-medium hover:text-primary transition-all active:scale-95">
+                <span class="material-symbols-outlined">database</span> Dataset Management
+            </button>
+            <button
+                class="neumorphic-outset flex items-center gap-2 px-6 py-3 rounded-full text-on-surface-variant font-medium hover:text-primary transition-all active:scale-95">
+                <span class="material-symbols-outlined">settings_suggest</span> Model Settings
+            </button>
+        </div>
+        <!-- Stats Overview Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-12">
+            <div class="neumorphic-outset p-6 rounded-xl flex flex-col gap-2">
+                <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Total
+                    Dataset</span>
+                <div class="flex items-end justify-between">
+                    <span class="font-headline-lg text-headline-lg text-text-heading">12,482</span>
+                    <span class="material-symbols-outlined text-primary text-3xl">storage</span>
+                </div>
+                <p class="text-success-green font-label-sm text-label-sm">+124 this week</p>
+            </div>
+            <div class="neumorphic-outset p-6 rounded-xl flex flex-col gap-2">
+                <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Model
+                    Accuracy (R²)</span>
+                <div class="flex items-end justify-between">
+                    <span class="font-headline-lg text-headline-lg text-text-heading">0.942</span>
+                    <span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+                </div>
+                <p class="text-success-green font-label-sm text-label-sm">High Reliability</p>
+            </div>
+            <div class="neumorphic-outset p-6 rounded-xl flex flex-col gap-2">
+                <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Total
+                    Predictions</span>
+                <div class="flex items-end justify-between">
+                    <span class="font-headline-lg text-headline-lg text-text-heading">45,109</span>
+                    <span class="material-symbols-outlined text-primary text-3xl">insights</span>
+                </div>
+                <p class="text-on-surface-variant font-label-sm text-label-sm">Cumulative since 2023</p>
+            </div>
+            <div class="neumorphic-outset p-6 rounded-xl flex flex-col gap-2">
+                <span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Latest
+                    Update</span>
+                <div class="flex items-end justify-between">
+                    <span class="font-headline-lg text-headline-lg text-text-heading">4h ago</span>
+                    <span class="material-symbols-outlined text-primary text-3xl">update</span>
+                </div>
+                <p class="text-on-surface-variant font-label-sm text-label-sm">Refined Training Weights</p>
+            </div>
+        </div>
+        <!-- Main Graphs Section (Asymmetric Layout) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter mb-12">
+            <!-- Scatter Plot Card -->
+            <div
+                class="lg:col-span-2 neumorphic-outset p-8 rounded-2xl relative overflow-hidden h-[450px] flex flex-col">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="font-headline-md text-headline-md text-text-heading">Actual vs Predicted Price</h2>
+                    <div class="neumorphic-inset px-4 py-2 rounded-lg flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-primary"></span>
+                        <span class="text-label-sm">R-Squared: 0.942</span>
+                    </div>
+                </div>
+                <div class="flex-grow flex items-center justify-center relative">
+                    <!-- Stylized Graph Placeholder using Neumorphic elements -->
+                    <div class="w-full h-full flex flex-col gap-4">
+                        <div class="w-full h-px bg-surface-variant"></div>
+                        <div class="w-full h-px bg-surface-variant"></div>
+                        <div class="w-full h-px bg-surface-variant"></div>
+                        <div class="w-full h-px bg-surface-variant"></div>
+                        <div class="w-full h-px bg-surface-variant"></div>
+                    </div>
+                    <!-- Mock Scatter Points -->
+                    <div class="absolute inset-0 p-8">
+                        <div class="relative w-full h-full">
+                            <div
+                                class="absolute bottom-[20%] left-[10%] w-3 h-3 rounded-full bg-primary/40 shadow-sm transition-transform hover:scale-150 cursor-pointer">
+                            </div>
+                            <div
+                                class="absolute bottom-[35%] left-[25%] w-3 h-3 rounded-full bg-primary/60 shadow-sm transition-transform hover:scale-150 cursor-pointer">
+                            </div>
+                            <div
+                                class="absolute bottom-[50%] left-[45%] w-3 h-3 rounded-full bg-primary/80 shadow-sm transition-transform hover:scale-150 cursor-pointer">
+                            </div>
+                            <div
+                                class="absolute bottom-[75%] left-[70%] w-3 h-3 rounded-full bg-primary shadow-sm transition-transform hover:scale-150 cursor-pointer">
+                            </div>
+                            <div
+                                class="absolute bottom-[85%] left-[85%] w-3 h-3 rounded-full bg-primary/90 shadow-sm transition-transform hover:scale-150 cursor-pointer">
+                            </div>
+                            <!-- Trend Line -->
+                            <div
+                                class="absolute bottom-0 left-0 w-full h-full border-b-2 border-l-2 border-surface-variant">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 w-[120%] h-px bg-primary/20 rotate-[-40deg] origin-bottom-left border-dashed border-t-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature Importance Card -->
+            <div class="neumorphic-outset p-8 rounded-2xl flex flex-col h-[450px]">
+                <h2 class="font-headline-md text-headline-md text-text-heading mb-8">Feature Importance</h2>
+                <div class="flex flex-col gap-6 flex-grow">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between text-label-md">
+                            <span>Square Footage</span>
+                            <span>84%</span>
+                        </div>
+                        <div class="w-full h-4 neumorphic-inset rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[84%] rounded-r-full"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between text-label-md">
+                            <span>Neighborhood Index</span>
+                            <span>62%</span>
+                        </div>
+                        <div class="w-full h-4 neumorphic-inset rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[62%] rounded-r-full"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between text-label-md">
+                            <span>Bedrooms</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="w-full h-4 neumorphic-inset rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[45%] rounded-r-full"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between text-label-md">
+                            <span>Year Built</span>
+                            <span>38%</span>
+                        </div>
+                        <div class="w-full h-4 neumorphic-inset rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[38%] rounded-r-full"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex justify-between text-label-md">
+                            <span>Lot Size</span>
+                            <span>15%</span>
+                        </div>
+                        <div class="w-full h-4 neumorphic-inset rounded-full overflow-hidden">
+                            <div class="h-full bg-primary w-[15%] rounded-r-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Recent Dataset Snippet (Neumorphic Table) -->
+        <div class="neumorphic-outset p-8 rounded-2xl overflow-hidden mb-12">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-text-heading">Recent Property Entries</h2>
+                    <p class="text-on-surface-variant font-body-md">Latest 5 samples from the training dataset</p>
+                </div>
+                <button
+                    class="neumorphic-outset px-6 py-2 rounded-lg text-primary font-bold hover:text-primary-container transition-all active:scale-95">
+                    View Full Dataset
+                </button>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="neumorphic-outset rounded-lg mb-4">
+                            <th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase">Property
+                                ID</th>
+                            <th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase">Location
+                            </th>
+                            <th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase">Sq Ft
+                            </th>
+                            <th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase">
+                                Predicted Price</th>
+                            <th class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase">Actual
+                                Price</th>
+                            <th
+                                class="py-4 px-6 font-label-md text-label-md text-on-surface-variant uppercase text-right">
+                                Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y-0">
+                        <tr class="horizontal-ridge hover:bg-surface-container-low transition-colors group">
+                            <td class="py-4 px-6 font-body-md text-primary font-bold">#PR-8821</td>
+                            <td class="py-4 px-6">Cirebon Kota</td>
+                            <td class="py-4 px-6">120 m²</td>
+                            <td class="py-4 px-6">Rp 850jt</td>
+                            <td class="py-4 px-6">Rp 845jt</td>
+                            <td class="py-4 px-6 text-right">
+                                <div class="flex justify-end gap-3">
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-primary hover:text-primary-container active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">edit</span>
+                                    </button>
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-error hover:text-error-red active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">delete</span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="horizontal-ridge hover:bg-surface-container-low transition-colors group">
+                            <td class="py-4 px-6 font-body-md text-primary font-bold">#PR-8822</td>
+                            <td class="py-4 px-6">Sumber</td>
+                            <td class="py-4 px-6">250 m²</td>
+                            <td class="py-4 px-6">Rp 1.4M</td>
+                            <td class="py-4 px-6">Rp 1.42M</td>
+                            <td class="py-4 px-6 text-right">
+                                <div class="flex justify-end gap-3">
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-primary hover:text-primary-container active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">edit</span>
+                                    </button>
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-error hover:text-error-red active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">delete</span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="horizontal-ridge hover:bg-surface-container-low transition-colors group">
+                            <td class="py-4 px-6 font-body-md text-primary font-bold">#PR-8823</td>
+                            <td class="py-4 px-6">Kedawung</td>
+                            <td class="py-4 px-6">180 m²</td>
+                            <td class="py-4 px-6">Rp 920jt</td>
+                            <td class="py-4 px-6">Rp 910jt</td>
+                            <td class="py-4 px-6 text-right">
+                                <div class="flex justify-end gap-3">
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-primary hover:text-primary-container active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">edit</span>
+                                    </button>
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-error hover:text-error-red active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">delete</span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="horizontal-ridge hover:bg-surface-container-low transition-colors group">
+                            <td class="py-4 px-6 font-body-md text-primary font-bold">#PR-8824</td>
+                            <td class="py-4 px-6">Mundu</td>
+                            <td class="py-4 px-6">95 m²</td>
+                            <td class="py-4 px-6">Rp 550jt</td>
+                            <td class="py-4 px-6">Rp 565jt</td>
+                            <td class="py-4 px-6 text-right">
+                                <div class="flex justify-end gap-3">
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-primary hover:text-primary-container active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">edit</span>
+                                    </button>
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-error hover:text-error-red active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">delete</span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-surface-container-low transition-colors group">
+                            <td class="py-4 px-6 font-body-md text-primary font-bold">#PR-8825</td>
+                            <td class="py-4 px-6">Talun</td>
+                            <td class="py-4 px-6">150 m²</td>
+                            <td class="py-4 px-6">Rp 780jt</td>
+                            <td class="py-4 px-6">Rp 780jt</td>
+                            <td class="py-4 px-6 text-right">
+                                <div class="flex justify-end gap-3">
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-primary hover:text-primary-container active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">edit</span>
+                                    </button>
+                                    <button
+                                        class="p-2 neumorphic-outset rounded-lg text-error hover:text-error-red active:neumorphic-button-pressed transition-all">
+                                        <span class="material-symbols-outlined text-sm">delete</span>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-background shadow-[16px_16px_32px_#D1D9E6,-16px_-16px_32px_#FFFFFF]">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-8 w-full max-w-container-max mx-auto gap-gutter">
+            <div class="flex flex-col items-center md:items-start">
+                <span class="font-headline-md text-headline-md text-primary font-bold mb-2">PrediksiRumah</span>
+                <span class="font-label-sm text-label-sm text-secondary">© 2024 PrediksiRumah - Universitas Muhammadiyah
+                    Cirebon (UMC)</span>
+            </div>
+            <div class="flex gap-8 items-center">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors"
+                    href="#">Contact</a>
+            </div>
+            <div class="flex gap-4">
+                <button
+                    class="w-10 h-10 neumorphic-outset rounded-full flex items-center justify-center text-primary hover:text-secondary active:neumorphic-button-pressed transition-all">
+                    <span class="material-symbols-outlined text-base">public</span>
+                </button>
+                <button
+                    class="w-10 h-10 neumorphic-outset rounded-full flex items-center justify-center text-primary hover:text-secondary active:neumorphic-button-pressed transition-all">
+                    <span class="material-symbols-outlined text-base">group</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+    <!-- FAB for quick action (only on Overview) -->
+    <button
+        class="fixed bottom-10 right-10 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center neumorphic-outset shadow-2xl active:scale-95 transition-transform group">
+        <span class="material-symbols-outlined text-3xl font-bold" style="font-variation-settings: 'FILL' 1;">add</span>
+        <span
+            class="absolute right-20 bg-white text-primary px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap font-bold pointer-events-none">New
+            Prediction</span>
+    </button>
+    <script>
+        // Micro-interactions for neumorphic buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                if (button.classList.contains('neumorphic-outset')) {
+                    button.style.transform = 'scale(0.97)';
+                }
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'scale(1)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple Mobile Menu Toggle Mockup
+        const mobileToggle = document.querySelector('.md\\:hidden');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                alert('Mobile navigation would expand here.');
+            });
+        }
+    </script>
+</body>
+
+</html>

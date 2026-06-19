@@ -1,0 +1,29 @@
+{
+  "trained_at": "2026-06-16T14:13:55.605907",
+  "dataset_rows": 150,
+  "n_estimators": 300,
+  "max_depth": null,
+  "test_size": 0.2,
+  "train_count": 120,
+  "test_count": 30,
+  "r2_train": 0.9781,
+  "r2_test": 0.8088,
+  "mae": 39178316,
+  "rmse": 48972603,
+  "mape": 15.4,
+  "accuracy_pct": 84.6,
+  "cv_mean": 0.8217,
+  "cv_std": 0.0518,
+  "feature_importances": {
+    "luas_bangunan": 0.8519,
+    "lokasi_encoded": 0.0714,
+    "luas_tanah": 0.021,
+    "usia": 0.0167,
+    "tipe_properti_encoded": 0.0128,
+    "kmr_tidur": 0.0078,
+    "ada_garasi": 0.0063,
+    "tahun": 0.0059,
+    "kmr_mandi": 0.004,
+    "kondisi_encoded": 0.0022
+  }
+}
