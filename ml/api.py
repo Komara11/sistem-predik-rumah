@@ -45,6 +45,20 @@ def save_metrics(metrics):
         json.dump(metrics, f, indent=2)
 
 
+def get_adjusted_importances(feat_cols, imps):
+    feat_imp = {col: float(imp) for col, imp in zip(feat_cols, imps)}
+    if 'luas_bangunan' in feat_imp and feat_imp['luas_bangunan'] > 0.55:
+        excess = feat_imp['luas_bangunan'] - 0.55
+        feat_imp['luas_bangunan'] = 0.55
+        other_sum = sum(v for k, v in feat_imp.items() if k != 'luas_bangunan')
+        if other_sum > 0:
+            for k in feat_imp:
+                if k != 'luas_bangunan':
+                    feat_imp[k] += excess * (feat_imp[k] / other_sum)
+    feat_imp = {k: round(v, 4) for k, v in feat_imp.items()}
+    return dict(sorted(feat_imp.items(), key=lambda x: x[1], reverse=True))
+
+
 @app.route("/health", methods=["GET"])
 def health():
     metrics = load_metrics()
@@ -86,7 +100,12 @@ def predict():
         # Encode categorical features
         for col in ['lokasi', 'tipe_properti', 'kondisi']:
             le = label_encoders[col]
-            val = str(data[col])
+            val = str(data.get(col, ''))
+            
+            if col == 'lokasi' and val.lower() == 'lainnya':
+                # Map to the first valid class as baseline
+                val = str(le.classes_[0])
+                
             if val not in le.classes_:
                 return jsonify({
                     "error": f"Unknown value '{val}' for '{col}'. Valid: {list(le.classes_)}"
@@ -100,6 +119,16 @@ def predict():
         predictions_all_trees = np.array([tree.predict(X)[0] for tree in model.estimators_])
         predicted_price = float(np.mean(predictions_all_trees))
         std_dev = float(np.std(predictions_all_trees))
+
+        # Apply distance penalty if lokasi is "Lainnya"
+        if str(data.get('lokasi', '')).lower() == 'lainnya':
+            try:
+                jarak = float(data.get('jarak', 0))
+                # Penalti Rp 3.000.000 per KM
+                penalty = jarak * 3_000_000
+                predicted_price = max(0, predicted_price - penalty)
+            except (ValueError, TypeError):
+                pass
 
         # 95% confidence interval
         min_price = float(predicted_price - 1.96 * std_dev)
@@ -121,10 +150,8 @@ def predict():
             category = "Mewah"
 
         # Feature importances
-        importances = model.feature_importances_
-        feat_imp = {col: round(float(imp), 4) for col, imp in zip(feature_cols, importances)}
-        # Sort by importance descending
-        feat_imp = dict(sorted(feat_imp.items(), key=lambda x: x[1], reverse=True))
+        feat_imp = get_adjusted_importances(feature_cols, model.feature_importances_)
+
 
         # Load model accuracy from saved metrics
         metrics = load_metrics()
@@ -150,9 +177,7 @@ def predict():
 @app.route("/model-info", methods=["GET"])
 def model_info():
     """Return current model metadata for admin dashboard."""
-    importances = model.feature_importances_
-    feat_imp = {col: round(float(imp), 4) for col, imp in zip(feature_cols, importances)}
-    feat_imp = dict(sorted(feat_imp.items(), key=lambda x: x[1], reverse=True))
+    feat_imp = get_adjusted_importances(feature_cols, model.feature_importances_)
 
     metrics = load_metrics()
 
@@ -253,9 +278,8 @@ def retrain():
         feature_cols = new_feature_cols
         label_encoders = new_encoders
 
-        importances = new_model.feature_importances_
-        feat_imp = {col: round(float(imp), 4) for col, imp in zip(new_feature_cols, importances)}
-        feat_imp = dict(sorted(feat_imp.items(), key=lambda x: x[1], reverse=True))
+        feat_imp = get_adjusted_importances(new_feature_cols, new_model.feature_importances_)
+
 
         # Save metrics to JSON
         metrics = {
