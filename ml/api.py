@@ -50,10 +50,16 @@ def get_adjusted_importances(feat_cols, imps):
     if 'luas_bangunan' in feat_imp and feat_imp['luas_bangunan'] > 0.55:
         excess = feat_imp['luas_bangunan'] - 0.55
         feat_imp['luas_bangunan'] = 0.55
-        other_sum = sum(v for k, v in feat_imp.items() if k != 'luas_bangunan')
+        
+        if 'luas_tanah' in feat_imp:
+            bonus_lt = excess * 0.70
+            feat_imp['luas_tanah'] += bonus_lt
+            excess -= bonus_lt
+            
+        other_sum = sum(v for k, v in feat_imp.items() if k not in ('luas_bangunan', 'luas_tanah'))
         if other_sum > 0:
             for k in feat_imp:
-                if k != 'luas_bangunan':
+                if k not in ('luas_bangunan', 'luas_tanah'):
                     feat_imp[k] += excess * (feat_imp[k] / other_sum)
     feat_imp = {k: round(v, 4) for k, v in feat_imp.items()}
     return dict(sorted(feat_imp.items(), key=lambda x: x[1], reverse=True))

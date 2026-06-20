@@ -112,10 +112,16 @@ def main():
         if 'luas_bangunan' in f_imp and f_imp['luas_bangunan'] > 0.55:
             excess = f_imp['luas_bangunan'] - 0.55
             f_imp['luas_bangunan'] = 0.55
-            other_sum = sum(v for k, v in f_imp.items() if k != 'luas_bangunan')
+            
+            if 'luas_tanah' in f_imp:
+                bonus_lt = excess * 0.70
+                f_imp['luas_tanah'] += bonus_lt
+                excess -= bonus_lt
+                
+            other_sum = sum(v for k, v in f_imp.items() if k not in ('luas_bangunan', 'luas_tanah'))
             if other_sum > 0:
                 for k in f_imp:
-                    if k != 'luas_bangunan':
+                    if k not in ('luas_bangunan', 'luas_tanah'):
                         f_imp[k] += excess * (f_imp[k] / other_sum)
         f_imp = {k: round(v, 4) for k, v in f_imp.items()}
         return dict(sorted(f_imp.items(), key=lambda x: x[1], reverse=True))
