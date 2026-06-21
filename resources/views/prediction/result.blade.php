@@ -3,6 +3,46 @@
 @section('title', 'Analisis Nilai Properti - PrediksiRumah Majalengka')
 
 @section('content')
+    <style>
+        @media print {
+            /* Hide unnecessary UI elements like Navbar, Footer, Action Buttons, and Decorative Images */
+            header, footer, .action-buttons, .decorative-section {
+                display: none !important;
+            }
+            
+            /* Reset body background for clean paper print */
+            body, main {
+                background: white !important;
+                color: black !important;
+            }
+            
+            /* Remove heavy neumorphic shadows that look messy in PDF */
+            .neumorphic-outset, .neumorphic-inset {
+                box-shadow: none !important;
+                border: 1px solid #e5e7eb !important; /* light gray border */
+                border-radius: 12px !important;
+                background-color: transparent !important;
+            }
+
+            /* Ensure background colors for graphs/bars are printed */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            /* Adjust spacing to fit on a single page if possible */
+            main {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                margin-top: 0 !important;
+            }
+            
+            @page {
+                margin: 1.5cm;
+            }
+        }
+    </style>
+
     <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
         <!-- Header Text -->
         <div class="mb-12 text-center">
@@ -146,7 +186,7 @@
         </div>
 
         <!-- Action Buttons -->
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8 py-12">
+        <div class="action-buttons flex flex-col md:flex-row justify-center items-center gap-8 py-12">
             <button
                 class="w-full md:w-auto px-10 py-4 neumorphic-outset rounded-full text-primary font-bold flex items-center justify-center gap-3 transition-all hover:scale-105"
                 id="downloadPdf">
@@ -166,7 +206,7 @@
         </div>
 
         <!-- Decorative Illustration Section -->
-        <section class="mt-8 mb-16 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
+        <section class="decorative-section mt-8 mb-16 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
             <div class="neumorphic-inset rounded-3xl h-64 w-full relative overflow-hidden">
                 <img alt="Modern House Architecture" class="w-full h-full object-cover"
                     src="{{ asset('images/modern-house.png') }}" />
