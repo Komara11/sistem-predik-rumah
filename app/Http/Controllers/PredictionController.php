@@ -32,11 +32,12 @@ class PredictionController extends Controller
             'luas_bangunan'  => 'required|numeric|min:1',
             'kmr_tidur'      => 'required|integer|min:1|max:10',
             'kmr_mandi'      => 'required|integer|min:1|max:5',
-            'lokasi'         => 'required|string|in:Ligung,Jatiwangi,Argapura,Majalengka,Sumberjaya,Kertajati',
+            'lokasi'         => 'required|string|in:Ligung,Jatiwangi,Argapura,Majalengka,Sumberjaya,Kertajati,Lainnya',
             'tipe_properti'  => 'required|string|in:Subsidi,Minimalis,Mewah',
             'kondisi'        => 'required|string|in:Baru,Bekas',
             'usia'           => 'required|integer|min:0|max:50',
             'ada_garasi'     => 'nullable',
+            'jarak'          => 'nullable|numeric|min:0',
         ]);
 
         // Build the feature payload for the Flask API
@@ -51,6 +52,7 @@ class PredictionController extends Controller
             'lokasi'        => $validated['lokasi'],
             'tipe_properti' => $validated['tipe_properti'],
             'kondisi'       => $validated['kondisi'],
+            'jarak'         => isset($validated['jarak']) ? (float) $validated['jarak'] : 0,
         ];
 
         try {
