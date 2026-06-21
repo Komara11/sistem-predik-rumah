@@ -98,9 +98,19 @@
                                     <option value="Sumberjaya" {{ old('lokasi') == 'Sumberjaya' ? 'selected' : '' }}>Sumberjaya</option>
                                     <option value="Ligung" {{ old('lokasi') == 'Ligung' ? 'selected' : '' }}>Ligung</option>
                                     <option value="Argapura" {{ old('lokasi') == 'Argapura' ? 'selected' : '' }}>Argapura</option>
+                                    <option value="Lainnya" {{ old('lokasi') == 'Lainnya' ? 'selected' : '' }}>Lainnya</option>
                                 </select>
                                 <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
                             </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label-md text-label-md ml-1" for="jarak">Jarak ke Pusat Kota (km)</label>
+                            <input
+                                id="jarak"
+                                name="jarak"
+                                class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
+                                placeholder="Opsional jika bukan 'Lainnya'" type="number" step="0.1" min="0"
+                                value="{{ old('jarak') }}" />
                         </div>
                         <div class="space-y-2">
                             <label class="font-label-md text-label-md ml-1" for="tipe_properti">Tipe Properti</label>

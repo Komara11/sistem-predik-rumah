@@ -193,7 +193,7 @@
             const pdfBtn = document.getElementById('downloadPdf');
             if (pdfBtn) {
                 pdfBtn.addEventListener('click', () => {
-                    alert('Dokumen PDF Laporan Prediksi sedang disiapkan (Modul Laravel-Excel/PDF akan diaktifkan di backend).');
+                    window.print();
                 });
             }
         });
