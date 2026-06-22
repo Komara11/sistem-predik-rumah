@@ -103,15 +103,29 @@
                                 <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
                             </div>
                         </div>
-                        <div class="space-y-2">
+
+                        <!-- NEW: Nama Kota (Hanya muncul jika Lainnya) -->
+                        <div class="space-y-2 {{ old('lokasi') == 'Lainnya' ? '' : 'hidden' }}" id="kotaLainnyaContainer">
+                            <label class="font-label-md text-label-md ml-1" for="nama_kota">Nama Kota / Wilayah</label>
+                            <input
+                                id="nama_kota"
+                                name="nama_kota"
+                                class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
+                                placeholder="Masukkan nama kota/wilayah..." type="text"
+                                value="{{ old('nama_kota') }}" />
+                        </div>
+
+                        <!-- Jarak container -->
+                        <div class="space-y-2 {{ old('lokasi') == 'Lainnya' ? '' : 'hidden' }}" id="jarakContainer">
                             <label class="font-label-md text-label-md ml-1" for="jarak">Jarak ke Pusat Kota (km)</label>
                             <input
                                 id="jarak"
                                 name="jarak"
                                 class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
-                                placeholder="Opsional jika bukan 'Lainnya'" type="number" step="0.1" min="0"
+                                placeholder="Wajib jika 'Lainnya'" type="number" step="0.1" min="0"
                                 value="{{ old('jarak') }}" />
                         </div>
+
                         <div class="space-y-2">
                             <label class="font-label-md text-label-md ml-1" for="tipe_properti">Tipe Properti</label>
                             <div class="relative">
@@ -198,6 +212,32 @@
     document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('predictionForm');
         const submitBtn = document.getElementById('submitBtn');
+
+        const lokasiSelect = document.getElementById('lokasi');
+        const kotaLainnyaContainer = document.getElementById('kotaLainnyaContainer');
+        const jarakContainer = document.getElementById('jarakContainer');
+        const namaKotaInput = document.getElementById('nama_kota');
+        const jarakInput = document.getElementById('jarak');
+
+        function toggleLainnyaFields() {
+            if (lokasiSelect.value === 'Lainnya') {
+                kotaLainnyaContainer.classList.remove('hidden');
+                jarakContainer.classList.remove('hidden');
+                namaKotaInput.setAttribute('required', 'required');
+                jarakInput.setAttribute('required', 'required');
+            } else {
+                kotaLainnyaContainer.classList.add('hidden');
+                jarakContainer.classList.add('hidden');
+                namaKotaInput.removeAttribute('required');
+                jarakInput.removeAttribute('required');
+            }
+        }
+
+        if (lokasiSelect) {
+            lokasiSelect.addEventListener('change', toggleLainnyaFields);
+            // Run on init in case old('lokasi') was Lainnya
+            toggleLainnyaFields();
+        }
 
         form.addEventListener('submit', (e) => {
             // Add visual feedback for button press

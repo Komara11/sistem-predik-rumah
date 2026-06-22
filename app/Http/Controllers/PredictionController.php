@@ -38,7 +38,13 @@ class PredictionController extends Controller
             'usia'           => 'required|integer|min:0|max:50',
             'ada_garasi'     => 'nullable',
             'jarak'          => 'nullable|numeric|min:0',
+            'nama_kota'      => 'nullable|string|max:100',
         ]);
+
+        $customLokasi = $validated['lokasi'];
+        if ($customLokasi === 'Lainnya' && !empty($validated['nama_kota'])) {
+            $customLokasi = $validated['nama_kota'];
+        }
 
         // Build the feature payload for the Flask API
         $payload = [
@@ -50,6 +56,7 @@ class PredictionController extends Controller
             'usia'          => (int) $validated['usia'],
             'ada_garasi'    => $request->has('ada_garasi') ? 1 : 0,
             'lokasi'        => $validated['lokasi'],
+            'nama_kota'     => $validated['nama_kota'] ?? null,
             'tipe_properti' => $validated['tipe_properti'],
             'kondisi'       => $validated['kondisi'],
             'jarak'         => isset($validated['jarak']) ? (float) $validated['jarak'] : 0,
@@ -122,7 +129,7 @@ class PredictionController extends Controller
         $luasBangunan    = $payload['luas_bangunan'];
         $kamarTidur      = $payload['kmr_tidur'];
         $kamarMandi      = $payload['kmr_mandi'];
-        $lokasi          = $payload['lokasi'];
+        $lokasi          = ($payload['lokasi'] === 'Lainnya' && !empty($payload['nama_kota'])) ? $payload['nama_kota'] : $payload['lokasi'];
         $tipeProperti    = $payload['tipe_properti'];
         $kondisi         = $payload['kondisi'];
         $usia            = $payload['usia'];

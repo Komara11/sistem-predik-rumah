@@ -163,7 +163,7 @@
                             </tr>
                             <tr class="border-b border-surface-dark-shadow/30">
                                 <td class="p-4 text-on-surface-variant">Lokasi</td>
-                                <td class="p-4 font-bold">Kec. {{ $lokasi }}</td>
+                                <td class="p-4 font-bold">{{ $lokasi }}</td>
                             </tr>
                             <tr class="border-b border-surface-dark-shadow/30">
                                 <td class="p-4 text-on-surface-variant">Tipe Properti</td>
