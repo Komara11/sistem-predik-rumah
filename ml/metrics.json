@@ -1,5 +1,5 @@
 {
-  "trained_at": "2026-06-21T00:17:01.326031",
+  "trained_at": "2026-06-21T00:30:49.335303",
   "dataset_rows": 150,
   "n_estimators": 300,
   "max_depth": null,
@@ -16,14 +16,14 @@
   "cv_std": 0.0518,
   "feature_importances": {
     "luas_bangunan": 0.55,
-    "lokasi_encoded": 0.2169,
-    "luas_tanah": 0.0639,
-    "usia": 0.0506,
-    "tipe_properti_encoded": 0.0389,
-    "kmr_tidur": 0.0238,
-    "ada_garasi": 0.0191,
-    "tahun": 0.0181,
-    "kmr_mandi": 0.012,
-    "kondisi_encoded": 0.0068
+    "luas_tanah": 0.2323,
+    "lokasi_encoded": 0.1223,
+    "usia": 0.0285,
+    "tipe_properti_encoded": 0.0219,
+    "kmr_tidur": 0.0134,
+    "ada_garasi": 0.0107,
+    "tahun": 0.0102,
+    "kmr_mandi": 0.0068,
+    "kondisi_encoded": 0.0038
   }
 }
