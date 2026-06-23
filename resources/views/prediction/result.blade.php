@@ -47,6 +47,7 @@
         <!-- Header Text -->
         <div class="mb-12 text-center">
             <h1 class="font-headline-lg text-headline-lg text-primary mb-2">Analisis Nilai Properti</h1>
+            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2">Laporan untuk: <span class="font-bold">{{ $namaPemohon }}</span></h2>
             <p class="text-on-surface-variant font-body-md">Berdasarkan model Random Forest yang dilatih dengan data pasar
                 Kabupaten Majalengka.</p>
         </div>

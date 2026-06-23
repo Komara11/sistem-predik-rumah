@@ -39,6 +39,7 @@ class PredictionController extends Controller
             'ada_garasi'     => 'nullable',
             'jarak'          => 'nullable|numeric|min:0',
             'nama_kota'      => 'nullable|string|max:100',
+            'nama_pemohon'   => 'required|string|max:255',
         ]);
 
         $customLokasi = $validated['lokasi'];
@@ -48,6 +49,7 @@ class PredictionController extends Controller
 
         // Build the feature payload for the Flask API
         $payload = [
+            'nama_pemohon'  => $validated['nama_pemohon'],
             'tahun'         => (int) date('Y'),
             'luas_tanah'    => (int) $validated['luas_tanah'],
             'luas_bangunan' => (int) $validated['luas_bangunan'],
@@ -134,9 +136,11 @@ class PredictionController extends Controller
         $kondisi         = $payload['kondisi'];
         $usia            = $payload['usia'];
         $adaGarasi       = $payload['ada_garasi'];
+        $namaPemohon     = $validated['nama_pemohon'];
 
         return view('prediction.result', compact(
             'price',
+            'namaPemohon',
             'minPrice',
             'maxPrice',
             'confidence',

@@ -29,6 +29,27 @@
         <!-- Form Card -->
         <div class="neumorphic-outset rounded-3xl p-8 md:p-12 bg-background">
             <form class="space-y-10" id="predictionForm" action="{{ url('/prediksi/hasil') }}" method="GET">
+                <!-- Data Diri Section -->
+                <section>
+                    <div class="flex items-center gap-2 mb-6 text-primary">
+                        <span class="material-symbols-outlined">person</span>
+                        <h2 class="font-headline-md text-headline-md">Data Diri</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                        <div class="space-y-2 md:col-span-2">
+                            <label class="font-label-md text-label-md ml-1" for="nama_pemohon">Nama Lengkap</label>
+                            <input
+                                id="nama_pemohon"
+                                name="nama_pemohon"
+                                class="w-full px-4 py-3 rounded-xl neumorphic-inset bg-background border-none focus:ring-1 focus:ring-primary outline-none text-body-md"
+                                placeholder="Masukkan nama lengkap Anda..." type="text" required
+                                value="{{ old('nama_pemohon') }}" />
+                        </div>
+                    </div>
+                </section>
+                
+                <hr class="border-none h-[2px] bg-gradient-to-r from-transparent via-surface-dark-shadow to-transparent opacity-50" />
+
                 <!-- Properti Section -->
                 <section>
                     <div class="flex items-center gap-2 mb-6 text-primary">
